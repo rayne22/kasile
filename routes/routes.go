@@ -1,7 +1,6 @@
 package routes
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"kasile/controllers"
 )
@@ -20,14 +19,13 @@ func (e *Serve) Routes() *Serve {
 	home := e.Engine.Group("/")
 	{
 		home.GET("", controllers.IndexController)
+		home.GET("test", controllers.TestController)
 	}
 
 	e.Engine.Static("/assets", "./static/assets")
 
 	//e.Engine.StaticFS("/more_static", http.Dir("my_file_system"))
 	//e.Engine.StaticFile("/favicon.ico", "./static/assets/favicon.ico")
-
-	fmt.Println("test")
 
 	return e
 }
