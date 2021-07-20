@@ -1,4 +1,4 @@
-{{ define "base" }}
+{{define "about-page" }}
     <!DOCTYPE html>
     <html lang="en">
 
@@ -33,72 +33,22 @@
     <body>
 
     <!-- ======= Header ======= -->
-    {{ template "header" .}}
+    {{ template "about-header" .}}
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    {{ template "hero" .}}
+    {{ template "heading-hero" .}}
     <!-- End Hero -->
 
     <main id="main">
         <!-- ======= About Section ======= -->
-        {{ template "about" .}}
+        {{ template "about-info" .}}
         <!-- End About Section -->
-
-        <!-- ======= Values Section ======= -->
-        {{ template "values" .}}
-        <!-- End Values Section -->
-
-        <!-- ======= Counts Section ======= -->
-        {{ template "counts" .}}
-        <!-- End Counts Section -->
-
-        <!-- ======= Features Section ======= -->
-        {{ template "features" .}}
-        <!-- End Features Section -->
-
-        <!-- ======= Services Section ======= -->
-        {{ template "services" .}}
-        <!-- End Services Section -->
-
-        <!-- ======= Pricing Section ======= -->
-        {{ template "pricing" .}}
-        <!-- End Pricing Section -->
-
-        <!-- ======= F.A.Q Section ======= -->
-        {{ template "faq" .}}
-        <!-- End F.A.Q Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        {{ template "portfolio" .}}
-        <!-- End Portfolio Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        {{ template "testimonials" .}}
-        <!-- End Testimonials Section -->
-
-        <!-- ======= Team Section ======= -->
-        {{ template "team" .}}
-        <!-- End Team Section -->
-
-        <!-- ======= Clients Section ======= -->
-        {{ template "clients" .}}
-        <!-- End Clients Section -->
-
-        <!-- ======= Recent Blog Posts Section ======= -->
-        {{ template "blogs" .}}
-        <!-- End Recent Blog Posts Section -->
-
-        <!-- ======= Contact Section ======= -->
-        {{ template "contact" .}}
-        <!-- End Contact Section -->
-
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
     {{ template "footer" .}}
     <!-- End Footer -->
-
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

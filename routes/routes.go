@@ -19,6 +19,7 @@ func (e *Serve) Routes() *Serve {
 	home := e.Engine.Group("/")
 	{
 		home.GET("", controllers.IndexController)
+		home.GET("about", controllers.AboutController)
 		home.GET("test", controllers.TestController)
 	}
 

@@ -30,7 +30,7 @@ var IndexController = func(c *gin.Context) {
 	//}
 	//models.LoadIndex(c.Writer)
 	c.HTML(http.StatusOK, "index", gin.H{
-		"title": "CHECK",
+		"title": "Kasile",
 	})
 
 }
