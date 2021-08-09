@@ -8,15 +8,15 @@ import (
 
 // Header keeps header information
 type Header struct {
-	SectionID string
+	SectionID    string
 	SectionTitle string
-	Title string
-	Logo string
+	Title        string
+	Logo         string
 }
 
-func LoadIndex(w http.ResponseWriter)  {
+func LoadIndex(w http.ResponseWriter) {
 
-	var headers = []Header {
+	var headers = []Header{
 		{
 			SectionID:    "#hero",
 			SectionTitle: "Header",
@@ -47,21 +47,16 @@ func LoadIndex(w http.ResponseWriter)  {
 		//},
 	}
 
-
 	tpl := template.Must(template.ParseGlob("templates/*/*.gohtml"))
 
-
-
 	// passes the template using the path
-	err := tpl.ExecuteTemplate(w, "index" , headers)
-
+	err := tpl.ExecuteTemplate(w, "index", headers)
 
 	if err != nil {
-		log.Println("EE",err)
+		log.Println("EE", err)
 		return
 	}
 }
-
 
 func MkSlice(args ...interface{}) []interface{} {
 	return args

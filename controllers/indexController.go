@@ -35,7 +35,6 @@ var IndexController = func(c *gin.Context) {
 
 }
 
-
 var TestController = func(c *gin.Context) {
 
 	h := models.Header{}
@@ -55,12 +54,12 @@ var TestController = func(c *gin.Context) {
 
 	//var body bytes.Buffer
 
-	err = t.Execute(c.Writer , h)
+	err = t.Execute(c.Writer, h)
 
-	log.Println(h.Title,"dasd")
+	log.Println(h.Title, "dasd")
 
 	if err != nil {
-		log.Println("EE",err)
+		log.Println("EE", err)
 		return
 	}
 
